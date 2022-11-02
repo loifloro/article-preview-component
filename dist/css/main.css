@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+body {
+  font-family: Manrope, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8rem;
+  min-height: 100vh;
+  content-visibility: auto;
+  background: hsl(210deg, 46%, 95%);
+  display: grid;
+  place-content: center;
+  line-height: 1.5;
+}
+
+p {
+  margin-block: unset;
+}
+
+.card {
+  border-radius: 1rem;
+  width: 21rem;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 0.5em 0.5em hsla(213deg, 12%, 71%, 0.164);
+}
+@media (min-width: 760px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: 50rem;
+    height: min-content;
+  }
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+@media (min-width: 47.5rem) {
+  .card__img {
+    object-position: left;
+  }
+}
+.card__content {
+  padding: 2rem 1.8rem 1.5rem;
+}
+.card__title {
+  color: hsl(217deg, 19%, 35%);
+  font-size: clamp(1.1rem, 1.0485074627rem + 0.223880597vw, 1.25rem);
+}
+.card__body {
+  font-size: 1.1em;
+  color: hsl(214deg, 17%, 51%);
+}
+.card__avatar {
+  border-radius: 100vw;
+  width: 3rem;
+}
+.card__author {
+  color: hsl(217deg, 19%, 35%);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+.card__profile {
+  margin-block: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 1.8rem;
+}
+.card__profile--hide .card__avatar,
+.card__profile--hide .card__info {
+  display: none;
+}
+.card__date {
+  font-weight: 500;
+  color: hsl(212deg, 23%, 69%);
+}
+.card__icon {
+  margin-left: auto;
+  float: inline-end;
+}
+.card__share {
+  display: inline-block;
+  text-align: center;
+  color: hsl(217deg, 19%, 35%);
+  padding: 0.5rem;
+  border-radius: 50%;
+  vertical-align: middle;
+  background: hsl(210deg, 46%, 95%);
+  transition: all ease 300ms;
+}
+.card__share:hover, .card__share--active {
+  color: hsl(210deg, 46%, 95%);
+  background: hsl(217deg, 19%, 35%);
+  cursor: pointer;
+}
+.card__tooltip {
+  background: hsl(217deg, 19%, 35%);
+  padding: 1rem 1.8rem;
+  border-radius: 0 0 0 0.2em;
+  transition: all ease 900ms;
+  box-shadow: 0 0.5em 0.5em hsla(213deg, 12%, 71%, 0.415);
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.card__tooltip--hide {
+  display: none;
+}
+@media (min-width: 47.5rem) {
+  .card__tooltip {
+    position: absolute;
+    width: max-content;
+    border-radius: 1em;
+    right: 15%;
+    top: 50%;
+  }
+}
+.card__tooltip p {
+  text-transform: uppercase;
+  color: hsl(214deg, 17%, 51%);
+  letter-spacing: 0.2rem;
+  display: inline;
+}
+.card__tooltip .fa-brands {
+  color: white;
+  font-size: 1.5em;
+  margin-left: 1rem;
+}
+.card__tooltip .fa-brands:hover {
+  color: hsl(210deg, 46%, 95%);
+  background: hsl(217deg, 19%, 35%);
+  cursor: pointer;
+}
+.card a:focus-visible {
+  outline: hsl(212deg, 23%, 69%) solid 1px;
+}
+
+/*# sourceMappingURL=main.css.map */
